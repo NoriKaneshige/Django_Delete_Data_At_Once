@@ -2,7 +2,7 @@
 
 [referred blog](https://narito.ninja/blog/detail/93/)
 
-![delete-selected-files-at-once](delete-selected-files-at-once.gif)
+![delete-selected-data-at-once](delete-selected-data-at-once.gif)
 
 > ## models.py
 ``` python
