@@ -8,3 +8,24 @@
 ``` python
 
 ```
+
+> ## admin.py
+``` python
+
+```
+
+> ## views.py
+``` python
+
+
+```
+
+> ## urls.py
+``` python
+
+```
+
+> ## uploadfile_list.html
+``` python
+
+```
