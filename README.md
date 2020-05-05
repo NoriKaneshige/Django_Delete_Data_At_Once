@@ -59,9 +59,8 @@ from .models import Post
 
 PostFormSet = forms.modelformset_factory(Post, fields='__all__', can_delete=True, extra=0)
 
-# modelformset_factory関数の引数、can_delete=Trueで削除チェックボックスが作れるようになり
-# extra=0は新規の作成フォームを作りません。あくまで今回は、モデルフォームセットを一覧表示+削除チェックボックスのために使うので
-# データの新規作成フォームは要らないですね。
+# can_delete=True enables checklist
+# extra=0 disable a form for new post
 
 def postindex(request):
     formset = PostFormSet(request.POST or None)
