@@ -91,7 +91,29 @@ urlpatterns = [
 ]
 ```
 
-> ## uploadfile_list.html
+> ## post_list.html
 ``` python
+<!-- In case that delete() by using filter() -->
+<!-- <form action="" method="POST">
+		{% for post in post_list %}
+			<p>post title:{{ post.title }} - delete: <input type="checkbox" name="delete" value="{{ post.pk }}"></p>
+		{% endfor %}
+		{% csrf_token %}
+		<button type="submit">delete</button>
+</form> -->
 
+
+
+<form action="" method="POST">
+        {{ formset.management_form }}
+        {% for form in formset %}
+            {% for field in form.hidden_fields %}{{ field }}{% endfor %}
+            <!-- {{ form.title.as_hidden }} hides input area of post title -->
+            {{ form.title.as_hidden }}
+            <p>the title of post:{{ form.instance.title }} - {{ form.DELETE }}</p>
+            <!-- {{ form.DELETE }} is a checkbox that modelformset has -->
+        {% endfor %}
+        {% csrf_token %}
+        <button type="submit">delete</button>
+</form>
 ```
